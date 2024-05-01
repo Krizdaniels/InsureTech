@@ -1,35 +1,44 @@
 #!/usr/bin/python3
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 
 app = Flask(__name__)
 
 # Define rates (in percentages) for different insurance product categories
 PRODUCT_RATES = {
-    'Motor': 5,     # Rate for Motor insurance (5%)
-    'Fire': 0.25,     # Rate for Fire insurance (25%)
-    'Burglary': 0.15,  # Rate for Travel insurance (15%)
-    'All Risk': 0.2,   # Rate for Travel insurance (20%)
-    'Householders': 0.2,  # Rate for Travel insurance (20%)
+    'Motor': 5,     
+    'Fire': 0.25,    
+    'Burglary': 0.15,  
+    'All Risk': 0.2,   
+    'Householders': 0.2, 
 }
 
-@app.route('/api/quote', methods=['POST'])
-def generate_quote():
-    # Retrieve user input from request
-    user_data = request.json
-    
-    # Extract insurance product category from user input
-    product_category = user_data.get('product_category')
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-    # Check if the product category is valid
-    if product_category in PRODUCT_RATES:
-        # Retrieve the rate for the product category
-        rate = PRODUCT_RATES[product_category]
-        
-        # Calculate the premium based on the rate and quote amount
-        value_amount = user_data.get('value_amount')
-        premium = value_amount * rate
-        
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        # Handle user registration form submission
+        # Store user details in database
+        return render_template('registration_success.html')
+    return render_template('register.html')
+
+@app.route('/generate_quote', methods=['POST'])
+def generate_quote():
+    if request.method == 'POST':
+        # Retrieve form data
+        product_category = request.form.get('product_category')
+        value_amount = float(request.form.get('value_amount'))
+
+        if product_category in PRODUCT_RATES:
+            rate = PRODUCT_RATES[product_category]
+            premium = value_amount * rate
+            return render_template('quote.html', premium=premium)
+        else:
+            return render_template('quote_error.html')
+
         # Return the premium as a JSON response
         return jsonify({
             'premium': premium,
@@ -43,4 +52,3 @@ def generate_quote():
 
 if __name__ == '__main__':
     app.run(debug=True)
-

@@ -1,0 +1,47 @@
+/* styles.css */
+
+/* Body and Container Styles */
+body {
+    background-color: #f0f0f0; /* Set background color for the entire page */
+    font-family: Arial, sans-serif; /* Set font family for text */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.container {
+    width: 80%; /* Set width of the container */
+    margin: auto; /* Center align the container */
+    text-align: center; /* Center align text within the container */
+}
+
+/* Heading Styles */
+h1 {
+    color: #333; /* Set color for headings */
+}
+
+/* Button Styles */
+.button {
+    display: inline-block; /* Display button as inline block */
+    padding: 10px 20px; /* Set padding for button */
+    background-color: #007bff; /* Set background color for button */
+    color: #fff; /* Set text color for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Add transition effect for background color change */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+/* Input Styles */
+.input {
+    width: 100%; /* Set width of input field */
+    padding: 10px; /* Set padding for input field */
+    border: 1px solid #ccc; /* Add border to input field */
+    border-radius: 5px; /* Add rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin-bottom: 10px; /* Add space between input fields */
+}
+
