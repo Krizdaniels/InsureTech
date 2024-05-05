@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 from models import db, User, Policy, PaymentTransaction, Quote
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data_warehouse.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://insuretech:betty@localhost/insuretech'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
