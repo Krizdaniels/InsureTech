@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Page</h1>
+        <div class="quote-details">
+            <h2>Quote Details</h2>
+            <p><strong>User:</strong> {{ user_name }}</p>
+            <p><strong>Policy Category:</strong> {{ policy_category }}</p>
+            <p><strong>Sum Insured:</strong> {{ sum_insured }}</p>
+            <p><strong>Premium Amount:</strong> {{ premium_amount }}</p>
+        </div>
+        <form action="/process_payment" method="POST">
+            <!-- Payment form fields go here -->
+            <button type="submit">Proceed to Payment</button>
+        </form>
+    </div>
+</body>
+</html>
