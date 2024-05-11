@@ -1,33 +1,51 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const quoteForm = document.getElementById('quoteForm');
-    const quoteResult = document.getElementById('quoteResult');
+// Function to generate a quote
+function generateQuote() {
+    // Retrieve input values from the form
+    var category = document.getElementById("category").value;
+    var sumInsured = document.getElementById("sumInsured").value;
+    
+    // Perform calculation based on category and sum insured
+    var rate;
+    switch (category) {
+        case "Motor":
+            rate = 0.05;
+            break;
+        case "Travel":
+            rate = 0.05;
+            break;
+        case "Home":
+            rate = 0.005;
+            break;
+        case "Fire":
+            rate = 0.0025;
+            break;
+        default:
+            alert("Invalid category");
+            return;
+    }
+    var premium = sumInsured * rate;
 
-    quoteForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+    // Display the premium
+    document.getElementById("premium").innerText = "Premium: $" + premium.toFixed(2);
+}
 
-        const formData = new FormData(quoteForm);
-        const jsonFormData = {};
-        formData.forEach((value, key) => { jsonFormData[key] = value });
+// Function to send email
+function sendEmail() {
+    // Implement email sending logic here
+    alert("Email sent!");
+}
 
-        fetch('/api/quote', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(jsonFormData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Update the quoteResult div with the generated quote details
-            quoteResult.innerHTML = `
-                <p>Name: ${data.name}</p>
-                <p>Product Category: ${data.product_category}</p>
-                <p>Sum Insured: ${data.sum_insured}</p>
-                <p>Premium: ${data.premium} ${data.currency}</p>
-            `;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    });
-});
+// Function to navigate to the home page
+function goToHomePage() {
+    window.location.href = "index.html";
+}
+
+// Function to navigate to the contact page
+function goToContactPage() {
+    window.location.href = "contact.html";
+}
+
+// Function to navigate to the support page
+function goToSupportPage() {
+    window.location.href = "support.html";
+}
