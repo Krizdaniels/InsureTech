@@ -1,189 +1,207 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #fff;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  header h1 {
-    font-size: 1.2rem;
-  }
-  
-  .header-right {
-    display: flex;
-  }
-  
-  .header-right a {
-    margin-left: 1rem;
-    color: inherit;
-  }
-  
-  .header-right a:hover {
-    color: #ddd;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-  }
-  
-  nav a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    color: #ddd;
-  }
-  
-  main {
-    padding: 2rem;
-  }
-  
-  .green-box {
-    background-color: #90EE90;
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    margin: 0 auto;
-    width: 60%;
-  }
-  
-  .green-box img {
-    width: 200px;
+    font-family: 'Noto San JP', sans-serif;
+    line-height: 1.6;
+    background-color: #fff
+}
+
+img {
+    max-width: 2000%;
     display: block;
-    margin-bottom: 1rem;
-  }
-  
-  blockquote {
-    font-style: italic;
-    margin-bottom: 1rem;
-  }
-  
-  blockquote ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  blockquote li {
-    margin-bottom: 0.5rem;
-  }
-  
-  h1, h2 {
-    margin-bottom: 1rem;
-  }
-  
-  .reasons-list,
-  .insurance-types {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 1rem 0;
-  }
-  
-  .reasons-list li,
-  .insurance-types li {
-    margin: 0.5rem;
-    text-align: center;
-  }
-  
-  .reasons-list li i,
-  .insurance-types li i {
-    font-size: 2rem;
-    color: #007bff;
-    margin-bottom: 0.5rem;
-  }
-  
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #f5f5f5;
-  }
-  
-  footer .footer-left,
-  footer .footer-center,
-  footer .footer-right {
-    flex: 1;
-  }
-  
-  footer p {
-    margin-bottom: 1rem;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .social-icons li {
-    list-style: none;
-  }
-  
-  .social-icons li a {
-    color: #007bff;
-  }
-  
-  .social-icons li a:hover {
-    color: #ddd;
-  }
-  
-  footer address {
-    line-height: 1.5;
-  }
-  
-  footer h2 {
-    margin-bottom: 0.5rem;
-  }
-  
-  footer ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  footer ul li {
-    margin-bottom: 0.5rem;
-  }
-  
-  footer ul li a {
-    color: #007bff;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+.section {
+    padding: 7em 0 ;
+}
+.container {
+    width: 85%;
+    max-width: 75em;
+    margin: 0 auto;
+}
+.split {
+display: flex;
+gap: 1em;
+flex-wrap: inherit, wrap;
+justify-content: center;
+
+&>* {
+    flex-basis: 32.5%;
+    min-width: ;: 15em;
+}
+
+}
+
+.spacing>*+* {
+    margin-top: var(--spacer, 2rem)
+}
+
+.btn {
+    display:  inline-block;
     text-decoration: none;
-  }
+    color: var(--clr-text, #fff);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: .5em 1.25em;
+    background: var(--clr-accent, blue);
+    border-radius: .25em;
+    transition:  
+        transform 250ms ease-in-out,
+        opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1);
+    opacity:  .9;
+}
+
+.primary-title {
+    font-size: 10em;
+    font-size: clamp(4rem, calc(5vw + 1rem), 5rem);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: medium;
+    font-size: 2em;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+    line-height: 1;
+    color: #17353d;
+    margin-bottom: 4rem;
+}
+
+.hero {
+    color: white;
+    text-align: center;
+    padding: 17em 0;
+    background-color: #222;
+
+    @supports (background-blend-mode: multiply) {
+        background: url(../images/Let\'s\ get\ you\ the\ pricing.png) no-repeat center center fixed ,
+             radial-gradient(#444, #fff);
+        background-blend-mode: multiply;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: cover;
+        background-size: cover;
+     }
   
-  footer ul li a:hover {
-    color: #ddd;
-  }
-  
-  /* Optional responsiveness for smaller screens */
-  
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 1rem;
+    // background-size: 100%;
+}
+
+.policy__item {
+    background: #fff;
+
+    &.policy__item {
+        display: block;
+        position: relative;
+        transform: scale(.85);
+        transform: transform 250ms ease-in-out;
+        text-decoration: none;
+        color: #333;
+        text-align: center;
+        line-height: 1.5;
+
+       
+        &:hover,
+        &:focus {
+            transform: scale(1);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 100% 100% 0 0;
+            border-radius: 50%;
+            background: #2193b0;
+            z-index: -1;
+        }
+
+        .policy__details {
+            opacity: 10;
+            text-shadow: 0 0 2em rgba( green, blue, alpha);
+            
+            }
+
+
+       
     }
-  
-    nav {
-      flex-direction: column;
-      align-items: center;
+
+    &.policy__details {
+        opacity: 0;
+        transition: opacity 250ms linear;
+
+        span {
+            display: block;
+            font-weight: 100;
+            font-size: 2.5rem;
+        
+        }
+        .paragraph {
+            font-size: 2rem;
+            background: #2193b0;
+        }
     }
-  
-    nav a {
-      margin-bottom: 1rem;
-    }
-  
-    .green-box {
-      width: 
-  
+}
+
+.policy__title {
+    background: radial-gradient(var(--clr-inner, rgb(193, 197, 185)), var(--clr-outer, #fff));
+    border-radius: 1em;
+    margin-bottom: 4em;
+    display: inline-table;
+    text-decoration: none;
+    color: var(--clr-text, #eee);
+    font-weight: 700;
+    text-transform: lowercase;
+    font-size: 25rem;
+    padding: .1em 1em;
+    border-radius: .25em;
+    transition:  
+        transform 250ms ease-in-out,
+        opacity 25ms linear;
+
+        &.policy__title {
+            font-size: 4rem;
+            line-height: 1.1;
+            color: #fff;
+            text-shadow: 0 0 .2em rgba(#000, .2em);
+        }
+}
+
+.marine-insurance {
+    --clr-inner: #000;
+    --clr-outer: rgba(10, 11, 11, 0.328);
+    --clr-accent: limegreen;
+}
+
+.motor-insurance {
+    --clr-inner: #000;
+    --clr-outer: rgba(10, 11, 11, 0.328);
+    --clr-accent: limegreen;
+}
+.house-insurance {
+    --clr-inner: #000;
+    --clr-outer: rgba(10, 11, 11, 0.328);
+    --clr-accent: limegreen;
+}
