@@ -18,11 +18,8 @@ Project End: 31st May, 2024
 
 ## Technologies Used
 
-- Backend: Python with Flask
 - Frontend: JavaScript
 - Frameworks: Flask (Python),HTML, CSS (JavaScript)
-- Libraries: Pipenv, SQLAlchemy
-- Database: MySQL
 - Tools: Git, GitHub
 
 ## Installation
@@ -30,12 +27,7 @@ Project End: 31st May, 2024
 To run INSURETECH locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/Krizdaniels/Insure_Tech.git
-2. Navigate to the backend directory: `cd backen`
-3. Install dependencies: `pip install -r requirements.txt`
-4. Run the Flask server: `python app.py`
-5. Navigate to the frontend directory: `cd frontend`
-6. Install dependencies: `npm install`
-7. Start the React app: `npm start`
+
 
 ## Usage
 
