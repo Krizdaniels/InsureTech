@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+     <!--navbar Section --> 
+   <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">InsureTech</a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span><span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="/" class="navbar__links">Home </a>
+            </li>
+            <li class="navbar__item">
+                <a href="/quote.html" class="navbar__links">Quote</a>
+            </li>
+            <li class="navbar__item">
+                <a href="/contact.html" class="navbar__links">Contact</a>
+            </li>
+            <li class="navbar__btn"><a href="/" 
+                class="button">Sign Up</a>
+            </li>
+        </ul>
+    </div>
+   </nav>
+   <script src="/static/script.js"></script>
+
+   <header>
+    <h1>Sign Up</h1>
+</header>
+<main>
+    <section id="signup-form">
+        <h2>Create an Account</h2>
+        <form id="signup-form" onsubmit="handleSignup(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+    <section id="signup-success" style="display: none;">
+        <h2>Sign Up Successful!</h2>
+        <p>Your account has been created successfully.</p>
+        <p><a href="quote.html">Proceed to Quote Page</a></p>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Your Company</p>
+</footer>
+
+<script>
+    function handleSignup(event) {
+        event.preventDefault(); // Prevent form submission
+        
+        // Perform form validation
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const dob = document.getElementById('dob').value;
+        const phone = document.getElementById('phone').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+
+        // Example validation: Check if password and confirm password match
+        if (password !== confirmPassword) {
+            alert('Passwords do not match.');
+            return;
+        }
+
+        // If validation passes, show success message and redirect
+        document.getElementById('signup-form').style.display = 'none';
+        document.getElementById('signup-success').style.display = 'block';
+    }
+</script>
+            <!-- Footer Section-->
+            <div class="footer__container">
+                <div class="footer__links">
+                    <div class="footer__link--wrapper">
+                        <div class="footer__link--items">
+                            <h3>About Us</h3>
+                            <a href="/sign__up">How it Works</a> <a href="/">Testimonials</a>
+                            <a href="/">Policies</a> <a href="/">Terms of Service</a>
+                        </div>
+                        <div class="footer__link--items">
+                        <h3>Contact Us</h3>
+                            <a href="/">Contact</a>
+                            <a href="/">Support</a>
+                    </div>
+                </div>
+                <div class="footer__link--wrapper">
+                    <div class="footer__link--items">
+                        <h3>Quotes</h3>
+                        <a href="/">Submit Quote</a>
+                        <a href="/">Benefits</a>
+                    </div>
+                    <div class="footer__link--items">
+                    <h3>Social Media</h3>
+                        <a href="/">Instagram</a> <a href="/">Twitter</a>
+                        <a href="/">Youtube</a><a href="/">Facebook</a>
+                </div>
+              </div>
+            </div>
+                <div class="social__media">
+                    <div class="social__media--wrap">
+                        <div class="footer__logo">
+                            <a href="/" id="footer__logo"><i class="fas fa-gem"></i>INSURETECH</a>
+                        </div>
+                        <p class="website__rights"> © InsureTech 2024. All rights reserved</p>
+                        <div class="social__icons">
+                            <a href="/" class="social__icon--link" 
+                            tagret="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="/" class="social__icon--link" 
+                            tagret="_blank">
+                                <i class="fab fa-Instagram"></i>
+                            </a>
+                            <a href="/" class="social__icon--link" 
+                            tagret="_blank">
+                                <i class="fab fa-Youtube"></i>
+                            </a>
+                            <a href="/" class="social__icon--link" 
+                            tagret="_blank">
+                                <i class="fab fa-Twitter"></i>
+                            </a>
+                        </div> 
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+</body>
+</html>

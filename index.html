@@ -6,9 +6,36 @@
     <title>InsureTech</title>
     <link href="https://fonts.google.com/static/styles.css">
     <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSlSKYnjx0BT+WB0QEEqlprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </head>
 
 <body>
+    <!--navbar Section --> 
+   <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">InsureTech</a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span><span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="index.html" class="navbar__links">Home </a>
+            </li>
+            <li class="navbar__item">
+                <a href="/quote.html" class="navbar__links">Quote</a>
+            </li>
+            <li class="navbar__item">
+                <a href="/contact.html" class="navbar__links">Contact</a>
+            </li>
+            <li class="navbar__btn"><a href="signup.html" 
+                class="button">Sign Up</a>
+            </li>
+        </ul>
+    </div>
+   </nav>
+   <script src="/static/script.js"></script>
+    
 
     <header class="hero">
         <div class="container spacing">
@@ -16,7 +43,7 @@
             <p class=" paragraph">We do the searching.
                 You do the saving.
                 Your one-stop shop for insurance comparison.</p>
-            <a href="#" class="btn">Click to get quotes</a>
+            <a href="quote.html" class="btn">Click to get quotes</a>
         </div>
     </header>
     <main>
@@ -24,6 +51,7 @@
             <div class="container">
                 <h2 class="section-title">Policy Options</h2>
                 <div class="split">
+                    <img src="/images/undraw_completed_m9ci.svg">
                     <a href="#" class="policy__item">
                         <img src="/images/Auto.png" alt="" class="policy__image" height="280" width="458">
                         <p class="policy__details"><span class="Motor-Insurance"></span>Motor Insurance</p>
@@ -39,15 +67,13 @@
                 </div>
             </div>
         </section>
-
-
         <section class="Our-policies">
             <div class="container">
                 <h2 class="section-title">Our policies</h2>
 
-                <article class="policy marine-insurance">
-                    <img src="/images/vessel.png" alt="" class="policy__image" height="500" width="800">
-                    <h3 class="policy__title">Marine Insurance</h3>
+                <article class="policy marine-insurance spacing">
+                    <img src="/images/undraw_container_ship_re_alm4.svg" height="10%", width="60%">
+                   <!-- <img src="/images/vessel.png" alt="" class="policy__image" height="500" width="800"> -->
                     <p class="policy__description"> Welcome to our Marine Insurance services, where we ensure your peace of mind on every voyage. 
 
                         Marine Insurance is your shield against the unpredictable waters. Whether you're a commercial shipping company or a recreational sailor, our policies provide comprehensive coverage for your vessel, cargo, and liabilities.
@@ -57,11 +83,12 @@
                         With clear and transparent terms, our policies make it easy for you to understand your coverage and make informed decisions. Our experienced team is always on hand to provide expert guidance and support, ensuring that you have the protection you need when you need it most.
                         
                         Don't let uncertainty cast a shadow over your maritime adventures. Click below to explore our Marine Insurance options and sail with confidence.</p>
-                    <a href="/images/" class="btn">Get Quote</a>
+                    <a href="/quote.html" class="btn">Get Quote</a>
             </article>
 
                 <article class="policy motor-insurance spacing">
-                    <img src="/images/Get peace of mind on the road with our comprehensive motor insurance coverage. From to breakdowns, we've got you covered. Drive confidently with us today..png" alt="" class="policy__image" height="500" width="800">
+                    <img src="/images/undraw_towing_re_wesa.svg" height="10%", width="40%">
+                   <!--<img src="/images/Get peace of mind on the road with our comprehensive.png" alt="" class="policy__image" height="500" width="800"> --> 
                     <h3 class="policy__title">Motor Insurance</h3>
                     <p class="policy__description"> Welcome to our Motor Insurance services, where we prioritize safeguarding your vehicle and ensuring your peace of mind on the road. Our motor insurance plans are designed to provide comprehensive coverage tailored to your specific needs.
 
@@ -79,11 +106,12 @@
                         5. Quick and Easy Claims Process: In the unfortunate event of an accident or damage to your vehicle, we understand the importance of a smooth claims process. Our streamlined claims procedure ensures that your claims are processed quickly and efficiently, minimizing any inconvenience to you.
                         <br>
                         Protect your vehicle and enjoy the freedom of the open road with our Motor Insurance services. Click below to get started and secure your coverage today.</p>
-                    <a href="" class="btn">Get Quote</a>
+                    <a href="/quote.html" class="btn">Get Quote</a>
                 </article>
 
                 <article class="policy house-insurance spacing">
-                    <img src="/images/house 1.png" alt="" class="policy__image" height="500" width="800">
+                    <img src="/images/undraw_best_place_re_lne9.svg" height="10%", width="40%">
+                   <!-- <img src="/images/house 1.png" alt="" class="policy__image" height="500" width="800"> --> 
                     <h3 class="policy__title">House Insurance</h3>
                     <p class="policy__description"> House insurance, also known as homeowners insurance, is a type of insurance policy that provides financial protection against damages to a residential property and its contents. It typically covers damages caused by events such as fire, theft, vandalism, and certain natural disasters like storms or earthquakes, depending on the policy's terms and conditions.
 
@@ -98,12 +126,66 @@
                         4. Additional Living Expenses (ALE) Coverage: This covers the cost of temporary housing and other expenses if your home becomes uninhabitable due to a covered event, such as a fire.
                         <br>
                         The cost of house insurance depends on various factors including the value of the property, location, age of the home, coverage limits, deductible amount, and the insurance provider's underwriting criteria. It's essential to carefully review the policy terms, coverage limits, and exclusions before purchasing house insurance to ensure that it meets your needs and adequately protects your property.</p>
-                    <a href="" class="btn">Get Quote</a>
+                 <a href="/quote.html" class="btn">Get Quote</a>
 
                     
             </div>
+
+            <!-- Footer Section-->
+            <div class="footer__container">
+                <div class="footer__links">
+                    <div class="footer__link--wrapper">
+                        <div class="footer__link--items">
+                            <h3>About Us</h3>
+                            <a href="/sign__up">How it Works</a> <a href="/">Testimonials</a>
+                            <a href="/">Policies</a> <a href="/">Terms of Service</a>
+                        </div>
+                        <div class="footer__link--items">
+                        <h3>Contact Us</h3>
+                            <a href="contact.html">Contact</a>
+                            <a href="/">Support</a>
+                    </div>
+                </div>
+                <div class="footer__link--wrapper">
+                    <div class="footer__link--items">
+                        <h3>Quotes</h3>
+                        <a href="/">Submit Quote</a>
+                        <a href="/">Benefits</a>
+                    </div>
+                    <div class="footer__link--items">
+                    <h3>Social Media</h3>
+                        <a href="/">Instagram</a> <a href="/">Twitter</a>
+                        <a href="/">Youtube</a><a href="/">Facebook</a>
+                </div>
+              </div>
+            </div>
+                <div class="social__media">
+                    <div class="social__media--wrap">
+                        <div class="footer__logo">
+                            <a href="/" id="footer__logo"><i class="fas fa-gem"></i>INSURETECH</a>
+                        </div>
+                        <p class="website__rights"> © InsureTech 2024. All rights reserved</p>
+                        <div class="social__icons">
+                            <a href="/" class="social__icon--link" 
+                            tagret="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="/" class="social__icon--link" 
+                            tagret="_blank">
+                                <i class="fab fa-Instagram"></i>
+                            </a>
+                            <a href="/" class="social__icon--link" 
+                            tagret="_blank">
+                                <i class="fab fa-Youtube"></i>
+                            </a>
+                            <a href="/" class="social__icon--link" 
+                            tagret="_blank">
+                                <i class="fab fa-Twitter"></i>
+                            </a>
+                        </div> 
+            </div>
         </section>
     </main>  
-
+    <script src="/static/script.js"></script>
 </body>
 </html>

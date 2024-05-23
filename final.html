@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InsureTech</title>
-    <link href="https://fonts.google.com/static/styles.css">
+    <title>Final Quote</title>
     <link rel="stylesheet" href="/static/styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSlSKYnjx0BT+WB0QEEqlprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </head>
-
 <body>
     <!--navbar Section --> 
    <nav class="navbar">
@@ -35,36 +32,12 @@
     </div>
    </nav>
    <script src="/static/script.js"></script>
-    
+   
+    <h1>Final Quote</h1>
+    <div id="finalQuoteDetails"></div>
+    <button id="downloadQuote" onclick="downloadQuote()">Download Quote</button>
 
-    <header class="hero">
-        <div class="container spacing">
-            <h1 class=" primary-title"> InsureTech</h1>
-            <p class=" paragraph">We do the searching.
-                You do the saving.
-                Your one-stop shop for insurance comparison.</p>
-           </div>
-    </header>
-    <main>
-<body>
-    <div class="container2">
-        <h1>Payment Page</h1>
-        <form id="paymentForm">
-            <p>Premium payable: <span id="payableAmount"></span></p>
-
-            <label for="cardNumber">Card Number:</label>
-            <input type="text" id="cardNumber" name="cardNumber" required>
-
-            <label for="expiryDate">Expiry Date:</label>
-            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
-
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" required>
-
-            <button type="button" onclick="processPayment()">Pay Now</button>
-            
-        </form>
-    </div>
+    <script src="/static/script.js"></script>
 
     <!-- Footer Section-->
     <div class="footer__container">
@@ -119,6 +92,6 @@
                     </a>
                 </div> 
     </div>
-    <script src="script.js"></script>
+    <script src="/static/script.js"></script>
 </body>
 </html>
