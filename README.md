@@ -31,7 +31,7 @@ To run INSURETECH locally, follow these steps:
 
 ## Usage
 
-- Open your browser and navigate to `http://localhost:5000`.
+- Open your browser and navigate to `http://localhost:5500`.
 - Fill out the insurance quote form with your details.
 - Click on the "Get Quote" button to generate your insurance quote.
 - Compare quotes from different insurance providers and choose the best option for you.
