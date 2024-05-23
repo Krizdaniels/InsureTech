@@ -225,22 +225,22 @@ p {
 }
 
 .section {
-    padding: 7em 0 ;
+    padding: 1em 0 ;
 }
 .container {
-    width: 80%;
+    width: 85%;
     max-width: 750em;
     margin: 0.0 auto;
 }
 .split {
 display: flex;
-gap: 4em;
-flex-wrap: inherit, nowrap;
+gap: 3em;
+flex-wrap: inherit, wrap;
 justify-content: center;
 
 &>* {
-    flex-basis: 70.5%;
-    min-width: 10em;
+    flex-basis: 71.5%;
+    min-width: 1.5em;
 }
 
 }
@@ -299,7 +299,7 @@ justify-content: center;
 .hero {
     color: rgb(252, 252, 252);
     text-align: center;
-    padding: 17em 0;
+    padding: 5em 0;
     background-color: #222;
 
     @supports (background-blend-mode: multiply) {
@@ -319,14 +319,14 @@ justify-content: center;
     background: ;
 
     &.policy__item {
-        display: block;
+        display: flex;
         position: relative;
         transform: scale(.85);
         transform: transform 250ms ease-in-out;
         text-decoration: none;
         color: #fff;
         text-align: center;
-        line-height: 1.8;
+        line-height: -0.2;
 
        
         &:hover,
