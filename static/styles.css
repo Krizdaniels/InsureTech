@@ -212,7 +212,7 @@ body {
 }
 
 img {
-    max-width: 2000%;
+    max-width: 200%;
     display: block;
 }
 
@@ -228,13 +228,13 @@ p {
     padding: 7em 0 ;
 }
 .container {
-    width: 85%;
+    width: 80%;
     max-width: 750em;
     margin: 0.0 auto;
 }
 .split {
 display: flex;
-gap: 8em;
+gap: 4em;
 flex-wrap: inherit, nowrap;
 justify-content: center;
 
